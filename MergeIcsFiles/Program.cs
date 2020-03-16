@@ -20,7 +20,7 @@ namespace MergeIcsFiles
         {
             try
             {
-                if (args.Length != 2 && Directory.Exists(args[0]) == false)
+                if (args.Length != 2 || Directory.Exists(args[0]) == false)
                 {
                     var oldColor = Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please provide a folder that contains ics files:");
